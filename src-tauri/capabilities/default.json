@@ -1,0 +1,30 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "enables the default permissions",
+  "windows": [
+    "main"
+  ],
+  "permissions": [
+    "core:default",
+    "dialog:default",
+    "dialog:allow-open",
+    "dialog:allow-save",
+    "dialog:allow-message",
+    "dialog:allow-ask",
+    "dialog:allow-confirm",
+    "fs:default",
+    "fs:allow-read-text-file",
+    "fs:allow-write-text-file",
+    "fs:allow-write-file",
+    "fs:allow-exists",
+    "fs:allow-lstat",
+    "fs:allow-mkdir",
+    "fs:allow-read-dir",
+    "fs:allow-rename",
+    "fs:allow-remove",
+    "fs:allow-unwatch",
+    "fs:allow-watch",
+    "fs:scope-app-recursive"
+  ]
+}

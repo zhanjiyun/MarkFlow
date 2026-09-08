@@ -1,0 +1,147 @@
+/* ============================================================
+   Force Milkdown/Crepe to inherit our CSS variable system.
+   The Crepe editor uses --crepe-color-* internally;
+   we redirect those to our own --bg-* / --text-* variables.
+   ============================================================ */
+
+/* ── Light ── */
+[data-theme="light"],
+[data-milkdown-theme="light"] {
+  --crepe-color-background: var(--bg-primary);
+  --crepe-color-on-background: var(--text-primary);
+  --crepe-color-surface: var(--bg-secondary);
+  --crepe-color-on-surface: var(--text-primary);
+  --crepe-color-outline: var(--border-color);
+  --crepe-color-primary: var(--accent-color);
+  --crepe-color-on-primary: #ffffff;
+  --crepe-color-selected: var(--accent-light);
+  --crepe-color-error: #f56c6c;
+  --crepe-font-default: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif;
+  --crepe-font-code: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* ── One Monokai Light ── */
+[data-theme="monokai-light"],
+[data-milkdown-theme="monokai-light"] {
+  --crepe-color-background: var(--bg-primary);
+  --crepe-color-on-background: var(--text-primary);
+  --crepe-color-surface: var(--bg-secondary);
+  --crepe-color-on-surface: var(--text-primary);
+  --crepe-color-outline: var(--border-color);
+  --crepe-color-primary: var(--accent-color);
+  --crepe-color-on-primary: #ffffff;
+  --crepe-color-selected: var(--accent-light);
+  --crepe-color-error: #f56c6c;
+  --crepe-font-default: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif;
+  --crepe-font-code: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* ── Dark ── */
+[data-theme="dark"],
+[data-milkdown-theme="dark"] {
+  --crepe-color-background: var(--bg-primary);
+  --crepe-color-on-background: var(--text-primary);
+  --crepe-color-surface: var(--bg-secondary);
+  --crepe-color-on-surface: var(--text-primary);
+  --crepe-color-outline: var(--border-color);
+  --crepe-color-primary: var(--accent-color);
+  --crepe-color-on-primary: #ffffff;
+  --crepe-color-selected: var(--accent-light);
+  --crepe-color-error: #f56c6c;
+  --crepe-font-default: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif;
+  --crepe-font-code: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* ── Editor area ── */
+.milkdown .ProseMirror {
+  padding: 32px 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  min-height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  font-size: calc(15px * var(--preview-scale, 1));
+  line-height: 1.8;
+}
+
+.milkdown .ProseMirror ::selection {
+  background: var(--accent-light);
+}
+
+/* ── WYSIWYG headings — match preview styles ── */
+.milkdown .ProseMirror h1 {
+  font-size: 2em;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-top: 1.5em;
+  margin-bottom: 0.6em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.milkdown .ProseMirror h2 {
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-top: 1.5em;
+  margin-bottom: 0.6em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.milkdown .ProseMirror h3 {
+  font-size: 1.25em;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-top: 1.5em;
+  margin-bottom: 0.6em;
+}
+
+.milkdown .ProseMirror h4 {
+  font-size: 1em;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-top: 1.2em;
+  margin-bottom: 0.4em;
+}
+
+/* ── WYSIWYG block elements ── */
+.milkdown .ProseMirror p { margin-bottom: 0.8em; }
+
+.milkdown .ProseMirror pre {
+  margin-bottom: 1em;
+  border-radius: 8px;
+  overflow-x: auto;
+  background: var(--code-bg);
+  border: 1px solid var(--border-color);
+  padding: 16px 20px;
+  font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+  font-size: 0.85em;
+  line-height: 1.6;
+}
+
+.milkdown .ProseMirror code {
+  font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+  font-size: 0.9em;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: var(--code-bg);
+  color: var(--accent-color);
+}
+
+.milkdown .ProseMirror blockquote {
+  margin: 1em 0;
+  padding: 12px 20px;
+  border-left: 4px solid var(--blockquote-border);
+  background: var(--blockquote-bg);
+  border-radius: 0 8px 8px 0;
+  color: var(--text-secondary);
+}
+
+.milkdown .ProseMirror ul, .milkdown .ProseMirror ol {
+  margin-bottom: 1em;
+  padding-left: 2em;
+}
+
+.milkdown .ProseMirror li { margin-bottom: 0.3em; }
+
+.milkdown .ProseMirror strong { font-weight: 600; }

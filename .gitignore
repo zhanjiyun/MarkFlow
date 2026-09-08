@@ -1,0 +1,48 @@
+# Dependencies
+node_modules
+
+# Build output
+dist
+src-tauri/target
+.cargo
+
+# Test data (large files)
+tests/spec.json
+tests/spec-report.md
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.swp
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Env
+*.local
+.env
+.env.*
+
+# Android build artifacts
+src-tauri/gen/android/app/build/
+src-tauri/gen/android/app/release/
+src-tauri/gen/android/.gradle/
+src-tauri/gen/android/build/
+src-tauri/gen/android/local.properties
+*.apk
+*.aab
+*.keystore
+*.jks
