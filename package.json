@@ -2,6 +2,27 @@
   "name": "markflow",
   "private": true,
   "version": "1.0.0",
+  "description": "本地优先的 Markdown 编辑器（Windows 桌面 + Android），所见即所得 / 源码 / 分栏编辑，AI 写作助手",
+  "license": "MIT",
+  "author": "zhanjiyun",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhanjiyun/MarkFlow.git"
+  },
+  "homepage": "https://github.com/zhanjiyun/MarkFlow#readme",
+  "bugs": {
+    "url": "https://github.com/zhanjiyun/MarkFlow/issues"
+  },
+  "keywords": [
+    "markdown",
+    "editor",
+    "tauri",
+    "wysiwyg",
+    "android",
+    "desktop",
+    "milkdown",
+    "codemirror"
+  ],
   "type": "module",
   "scripts": {
     "dev": "vite",

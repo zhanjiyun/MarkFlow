@@ -186,6 +186,10 @@ Windows 设置 → 应用 → 已安装的应用 → MarkFlow → 卸载；建�
 | `F11` | 禅模式（专注模式） |
 | `Ctrl + 滚轮` | 缩放预览字体 |
 
+## 贡献
+
+欢迎提交 Issue 和 Pull Request。开发环境、自检命令和 PR 约定见 [贡献指南](CONTRIBUTING.md)。
+
 ## 开源协议
 
 本项目基于 MIT License 开源。详见 [LICENSE](./LICENSE) 文件。
