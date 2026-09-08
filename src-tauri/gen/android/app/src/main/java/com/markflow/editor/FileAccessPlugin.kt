@@ -3,6 +3,8 @@ package com.markflow.editor
 import android.app.Activity
 import android.content.Intent
 import android.net.Uri
+import android.os.Build
+import android.provider.DocumentsContract
 import android.provider.OpenableColumns
 import androidx.activity.result.ActivityResult
 import app.tauri.annotation.ActivityCallback
@@ -43,6 +45,17 @@ class FileAccessPlugin(private val activity: Activity) : Plugin(activity) {
                 arrayOf("text/markdown", "text/plain", "application/octet-stream")
             )
             putExtra(Intent.EXTRA_ALLOW_MULTIPLE, false)
+            // Always open at "Recent" — otherwise the picker remembers the last
+            // folder the user navigated to (often Downloads).
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                putExtra(
+                    DocumentsContract.EXTRA_INITIAL_URI,
+                    DocumentsContract.buildRootUri(
+                        "com.android.externalstorage.documents",
+                        "recent"
+                    )
+                )
+            }
         }
         startActivityForResult(invoke, intent, "pickAndReadFileResult")
     }
